@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emimfi</title>
+    <meta name="msapplication-TileImage" content="https://emimfi.com/wp-content/uploads/2022/11/cropped-EMI-Logo-270x270.png">
+    <link rel="icon" href="https://emimfi.com/wp-content/uploads/2022/11/cropped-EMI-Logo-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://emimfi.com/wp-content/uploads/2022/11/cropped-EMI-Logo-192x192.png" sizes="192x192">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Google font Icon -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <div class="emi-main">
+            
+        <!-- Section header bar -->
+        <section class="emi-header">
+            <div class="header-bar">
+                <p>email: <span>emi@emimfi.com</span></p>
+                <p>Hotline: <span>+856-21-520520</span></p>
+                <p>Emi Headquarters: <span>Saphanthong Nuea Village, Sisattanak District, Vientiane Capital,</span></p>
+            </div>
+        </section>
+
+        <!-- Section header manu bar -->
+        <section class="emi-menu-bar" id="headerScrolling">
+            <div class="emi-logo">
+                <img src="assets/upload_img/emi-logo.png" alt="emi-logo">
+            </div>
+            <div class="emi-menu">
+                <ul>
+                    <li><a href="index.html"><i class="material-symbols-outlined">home_work</i> Home</a></li>
+                    <li>
+                        <a href="#" onclick="toggleMenu()"><i class="material-symbols-outlined">layers</i> Products & Services <i class="material-symbols-outlined">expand_more</i></a>
+                        
+                        <div class="sub-menu" id="subMenu">
+                            <nav>
+                               <ol>
+                                    <li><a href=""><i class="material-symbols-outlined">real_estate_agent</i> <span>Loans <span>ເງິນກູ້ແສນບາຍ</span></span></a></li>
+                                    <li><a href=""><i class="material-symbols-outlined">savings</i> <span>Deposit <span>ເງິນຝາກທີ່ອຸນໃຈ</span></span></a></li>
+                                    <li><a href=""><i class="material-symbols-outlined">account_balance</i> <span>Saving <span>ເງິນຝາກປະຫຍັດສຸດຄຸ້ມ</span></span></a></li>
+                                    <li><a href=""><i class="material-symbols-outlined">celebration</i> <span>Affatoun <span>ເພື່ອອະນາຄົດທີ່ສົດໃສ່</span></span></a></li>
+                                </ol> 
+                            </nav>
+                            
+                        </div>
+                        
+                    </li>
+                    <li><a href="services.html"><i class="material-symbols-outlined">electrical_services</i> Events</a></li>
+                    <li><a href="about-us.html"><i class="material-symbols-outlined">help</i> About Us</a></li>
+                    <li><a href="contact-us.html"><i class="material-symbols-outlined">perm_contact_calendar</i> Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="emi-brows">
+                <li><a href="report/login.php?lang=1" class="login-emi"><i class="material-symbols-outlined">language</i> LA</a></li>
+                <li>
+                    <a href="#" onclick="toggleLogin()" class="login-emi"><i class="material-symbols-outlined">account_circle</i> Log In</a>
+                    <div class="subb-login" id="MenuLogin">                        
+                        <nav>
+                            <h2>LOGIN SYSTEMS</h2>
+                            <ol>
+                                <li><a href="http://3.0.117.91:8080/R9-gwt/R9.html" target="_blank"><i class="material-symbols-outlined">tv_options_edit_channels</i> <span>O9 Report <span>ລະບົບລາຍງານ</span></span></a></li>
+                                <li><a href="#" onclick="toggleOpen()"><i class="material-symbols-outlined">real_estate_agent</i> <span>KYC Loan <span>ເງິນກູ້ອອນໄລນ໌</span></span></a></li>
+                                <li><a href="https://emimfi.odoo.com/" target="_blank"><i class="material-symbols-outlined">person_play</i> <span>Odoo <span>ລະບົບອົງກອນ</span></span></a></li>
+                            </ol> 
+                        </nav>                    
+                    </div>
+                </li>
+
+                
+            </div>
+
+        </section>
+
+        <!-- main container  -->
+        <section class="main-container main-wraper">
+            <div class="side-main">
+                <div class="mySlides fade">
+                    <img src="assets/upload_img/emi-slide--03.jpg" style="width:100%">
+                    <div class="text">
+                        <div class="fade-up">
+                            <div class="caption">
+                                <h3>EMI Shines at ASEAN Business Awards Laos 2022</h3>
+                                <p>We are thrilled to announce that EMI, a leading microfinance provider in Laos, has been honored with two prestigious awards at the ASEAN Business Award Laos 2022 – the SME Excellent Award for Employment and the Skill Development Award for Outstanding Company...</p>
+                                <br>
+                                <a href="#">Read more <i class="material-symbols-outlined">east</i></a>
+                            </div> 
+                        </div>                       
+                    </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="assets/upload_img/emi-slide-01.jpg" style="width:100%">
+                    <div class="text">
+                        <div class="fade-up">
+                            <div class="caption">
+                                <h3>EMIMFI GREEN!</h3>
+                                <p>We are thrilled to announce that EMI, a leading microfinance provider in Laos, has been honored with two prestigious awards at the ASEAN Business Award Laos 2022 – the SME Excellent Award for Employment and the Skill Development Award for Outstanding Company...</p>
+                                <br>
+                                <a href="#">Read more <i class="material-symbols-outlined">east</i></a>
+                            </div> 
+                        </div>                        
+                    </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="assets/upload_img/emi-slide-02.jpg" style="width:100%">
+                    <div class="text">
+                        <div class="fade-up">
+                            <div class="caption">
+                                <h3>Winning Two Prestigious Awards!</h3>
+                                <p>We are thrilled to announce that EMI, a leading microfinance provider in Laos, has been honored with two prestigious awards at the ASEAN Business Award Laos 2022 – the SME Excellent Award for Employment and the Skill Development Award for Outstanding Company...</p>
+                                <br>
+                                <a href="#">Read more <i class="material-symbols-outlined">east</i></a>
+                            </div> 
+                        </div>                        
+                    </div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="assets/upload_img/affatoun.jpg" style="width:100%">
+                    <div class="text">
+                        <div class="fade-up">
+                            <div class="caption">
+                                <h3>EMIMFI 2024!</h3>
+                                <p>We are thrilled to announce that EMI, a leading microfinance provider in Laos, has been honored with two prestigious awards at the ASEAN Business Award Laos 2022 – the SME Excellent Award for Employment and the Skill Development Award for Outstanding Company...</p>
+                                <br>
+                                <a href="#">Read more <i class="material-symbols-outlined">east</i></a>
+                            </div> 
+                        </div>                                               
+                    </div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center; padding: 15px 0;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+            <div class="vision-mission">
+                <div class="emi-vision">
+                    <div class="vision-text">
+                        <i class="material-symbols-outlined">my_location</i>
+                        <h1>OUR <span>VISION</span></h1>
+                        <p>ໃຫ້ການບໍລິການດ້ານການເງິນທີ່ຫຼາກຫຼາຍ ແບບມີຄວາມ
+                            ຮັບຜິດຊອບ ແລະ ໃຫ້ຄວາມຮູ້ທີ່ກ່ຽວກັບການເງິນແກ່ຄອບຄົວ
+                            ທີ່ມີລາຍໄດ້ຕ່ຳ ແລະ ປານກາງເພື່ອສ້າງຄວາມເຂັ້ມແຂງ
+                            ດ້ານການດຳລົງຊິວິດ ແລະ ທຸລະກິດຄອບຄົວ
+                            ຂອງພວກເຂົາແບບຍືນຍົງ.</p>
+                    </div>
+                    <div class="vision-text">
+                        <i class="material-symbols-outlined">stream</i>
+                        <h1>OUR <span class="m">MISSION</span></h1>
+                        <p>ສະຖາບັນການເງິນຈຸລະພາກ ທີ່ຮັບເງິນຝາກ ເອກພັດທະນາ
+                            ແມ່ນໜຶ່ງໃນຜູ້ນຳໃນການໃຫ້ບໍລິການທາງດ້ານການເງິນຈຸລະພາກ
+                            ທີ່ມີຄຸນນະພາບ ແລະ ລ້ຳສະໄຫມ ໂດຍໃຫ້ບໍລິການທາງດ້ານການເງິນ
+                            ແລະ ບໍ່ແມ່ນການເງິນໃຫ້ກັບຄອບຄົວຜູ້ທີ່ມີລາຍໄດ້ຕ່ຳ ຫາ ປານກາງ
+                            ໃນປະເທດລາວ.</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="emi-value">
+                
+                <div class="values">
+                    <!-- <h3>OUR VALUE</h3> -->
+                    <div class="social">
+                        <div class="social-text">
+                            <h4><span>SOCIAL</span> GOALS</h4>
+                            <hr>
+                            <p>Our operations are guided by six key social goals</p>
+                            </br>
+                            <div class="emi-num" style="border-left: 3px solid var(--green-color-100);">
+                                <div class="num-text">
+                                    <h5>01</h5>
+                                </div>
+                                
+                                <p>EMI offers responsible financial services, enabling clients to sustainably grow their household and business assets and achieve their family goals.</p>
+                            </div>
+
+                            <div class="emi-num" style="border-left: 3px solid var(--pink-color);">
+                                <div class="num-text">
+                                    <h5>02</h5>
+                                </div>
+                                <p>EMI offers first-rate financial education services, helping clients learn to manage their money wisely in meeting their household budget needs and growing their businesses.</p>
+                            </div>
+
+                            <div class="emi-num" style="border-left: 3px solid var(--pure-color);">
+                                <div class="num-text">
+                                    <h5>03</h5>
+                                </div>
+                                <p>EMI is an equal opportunity employer that values diversity and invests in the continuous education of its employees.</p>
+                            </div>
+
+                            <div class="emi-num" style="border-left: 3px solid var(--yellow-color);">
+                                <div class="num-text">
+                                    <h5>04</h5>
+                                </div>
+                                <p>EMI follows microfinance industry best practice and works closely with partners and peers to ensure sustainable growth and offer quality financial inclusion in Lao PDR.</p>
+                            </div>
+
+                            <div class="emi-num"  style="border-left: 3px solid var(--blue-color);">
+                                <div class="num-text">
+                                    <h5>05</h5>
+                                </div>
+                                <p>EMI seeks long-term sustainability through financial viability while creating client value.</p>
+                            </div>
+
+                            <div class="emi-num"  style="border-left: 3px solid var(--orange-color);">
+                                <div class="num-text">
+                                    <h5>06</h5>
+                                </div>
+                                <p>EMI cares about the environment and takes measurable steps to reduce its carbon footprint.</p>
+                            </div>
+                        </div>
+                        <div class="social-text">
+                            <img src="assets/upload_img/social-value_Artboard.png" alt="social">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- end emi value  -->
+
+            <!-- emi background  -->
+            <section class="emi-abouts">
+                <div class="abouts">
+                    <div class="about-text">
+                        <img src="assets/upload_img/about-us.png" alt="about us">
+                    </div>
+                    <div class="about-text">
+                        <div class="text_l">
+                            <h2>ABOUT <span>US</span>
+                                <hr>
+                            </h2>
+                            <P>We are the leading sustainable social enterprise and provider of ethical microfinance in Lao PDR.</P>
+                            <P>Utilising modern technology, we responsibly offer a variety of innovative, competitive and ethical financial services including loan products, saving products, and insurances, along with critical support services like client product marketing and financial education...</P>
+                            
+                            <div class="learn-btn">
+                                <a href="#">Read more.... <i class="material-symbols-outlined">east</i></a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <!-- Emi service  -->
+            <section class="emi-service">
+                <div class="service-group">
+                    <h2>OUR <span>SERVICES</span></h2>
+                    <p></p>
+                    <div class="group-servic">
+                        <div class="services">
+                            <i class="material-symbols-outlined">real_estate_agent</i>
+                            <div class="service-text">
+                                <h3>Loans</h3>
+                                <h1 class="count" value="138000">0</h1>
+                                <p>ເງິນກູ້ແສນບາຍ ແລະ ສະດວກຈ່າຍຢູ່ໃສ່ກໍໄດ້...<p>
+
+                                <div class="btn-learn">
+                                    <a href="#">View more.. <i class="material-symbols-outlined">east</i></a>
+                                </div>
+                                
+                            </div>                    
+                        </div>
+
+                        <div class="services">
+                            <i class="material-symbols-outlined">savings</i>
+                            <div class="service-text">
+                                <h3>Deposit</h3>
+                                <h1 class="count" value="6000">0</h1>
+                                <p>ເງິນຝາກທີ່ອຸນໃຈ ແລະ ຖອນຢູ່ໃສ່ກໍໄດ້...<p>
+                                <div class="btn-learn">
+                                    <a href="#">View more.. <i class="material-symbols-outlined">east</i></a>
+                                </div>
+                            </div>                    
+                        </div>
+
+                        <div class="services">
+                            <i class="material-symbols-outlined">account_balance</i>
+                            <div class="service-text">
+                                <h3>Saving</h3>
+                                <h1 class="count" value="18000">0</h1>
+                                <p>ເງິນຝາກປະຫຍັດສຸດຄຸ້ມ ແລະ ປວດໄພ...<p>
+                                <div class="btn-learn">
+                                    <a href="#">View more.. <i class="material-symbols-outlined">east</i></a>
+                                </div>
+                            </div>                    
+                        </div>
+
+                        <div class="services">
+                            <i class="material-symbols-outlined">celebration</i>
+                            <div class="service-text">
+                                <h3>Affatoun</h3>
+                                <h1 class="count" value="4000">0</h1>
+                                <p>ໂຄງການການສຶກສາທາງດ້ານການເງິນ ແລະ ເພື່ອອະນາຄົດທີ່ສົດໃສ່...<p>
+
+                                <div class="btn-learn">
+                                    <a href="#">View more.. <i class="material-symbols-outlined">east</i></a>
+                                </div>
+                            </div>                    
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </section>
+
+            <!-- Emi app store  -->
+            <section class="app-store">
+                <div class="store">
+                    <div class="img-store">
+                        <img src="assets/upload_img/emi-smart-app.png" alt="">
+                    </div>
+                    <div class="store-link">
+                        <h1>Application</h1>
+                        <h2>EMI SMART APPLICATION</h2>
+                        <P>Download here</P>
+
+                        <a href="https://play.google.com/store/apps/details?id=com.jits.mbanking.emi.production&pcampaignid=web_share" target="_blank"><img src="assets/upload_img/google_play.png" alt=""></a>
+                        <a href="https://apps.apple.com/th/app/emi-smart/id1673334414" target="_blank"><img src="assets/upload_img/apple_store.png" alt=""></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Emi our story  -->
+            <section class="emi-ourstory">
+                <div class="solution">
+                    <div class="item-text">
+                        <h2>Our <span>Partners</span></h2>
+                    </div>
+                    
+                    <div class="item-solution">
+                        <img src="assets/upload_img/allianz-logo.svg" alt="">
+                        <img src="assets/upload_img/cib.png" class="circle" alt="">
+                        <img src="assets/upload_img/bcelone.png" class="circle" alt="">
+                        <img src="assets/upload_img/ldb.jpg" class="circle" alt="">
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- end our partners  -->
+        <section class="emi-footer">
+            <div class="group-footer">
+                
+                <div class="emi-brand">
+                    <h1>emimfi</h1>
+                    <div class="bran">
+                        <p>Email: <span>emi@emimfi.com</span></p>
+                        <p>Hotline: <span>+856-21-520520</span></p>
+                        <p>Emi Headquarters: <span>Saphanthong Nuea Village, Sisattanak District, Vientiane Capital</span></p>
+                    </div>
+                    <h2>Follows</h2>
+                    <div class="social">
+                        <a href="">Whatsapp</a>
+                        <a href="">Facebook</a>
+                        <a href="">Tiktok</a>
+                        <a href="">Youtube</a>
+                    </div>
+                </div>
+                <div class="footer-menu">
+                    
+                    <div class="produ">
+                        <ul>
+                            <h2>Products</h2>
+                            <li><a href="#"><i class="material-symbols-outlined">real_estate_agent</i> Loans</a></li>
+                            <li><a href="#"><i class="material-symbols-outlined">savings</i> Deposit</a></li>
+                            <li><a href="#"><i class="material-symbols-outlined">account_balance</i> Saving</a></li>
+                            <li><a href="#"><i class="material-symbols-outlined">celebration</i> Affatoun</a></li>
+                        </ul>
+                        <ul>
+                            <h2>Services</h2>
+                            <li><a href="#"><i class="material-symbols-outlined">payments</i> Financial</a></li>
+                            <li><a href="#"><i class="material-symbols-outlined">school</i> Education</a></li>
+                            <li><a href="#"><i class="material-symbols-outlined">apartment</i> Branch</a></li>
+                            <li><a href="#"><i class="material-symbols-outlined">contact_support</i> Support</a></li>
+                        </ul>
+                        <ul>
+                            <h2>About Us</h2>
+                            <li><a href="#"><i class="material-symbols-outlined">question_mark</i> About Us</a></li>
+                            <li><a href="#"><i class="material-symbols-outlined">phone_in_talk</i> Contact Us</a></li>
+                            <!-- <li><a href="#"><i class="material-symbols-outlined">apartment</i> Branch</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="emi-contact">                   
+                    <div class="send-mail">
+                        <h2>Send E-mail</h2>
+                        <div class="form-control">
+                            <input type="text" placeholder="Full Name">
+                        </div>
+                        <div class="form-control">
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div class="form-control">
+                            <textarea name="" id="message" placeholder="Message"></textarea>
+                        </div>
+                        <div class="btn-send">
+                            <button type="submit">SEND</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="emi_forms" id="forms">
+            <div class="forms">
+                <button class="close" onclick="toggleOpen()"><i class="material-symbols-outlined">close</i></button>
+                <h2>EMI SYSTEMS</h2>
+                <form action="" method="POST">
+                    <div class="group-form">
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="group-form">
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div class="group-form">
+                        <a href="#">Forgot passord?</a>
+                    </div>
+
+                    <div class="btn-submit">
+                        <button type="submit">Log In</button>
+                    </div>
+                </form>
+                <p>Contact admin for support</p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Ipport toggle submenu  -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
