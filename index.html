@@ -12,6 +12,9 @@
 
     <!-- Google font Icon -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.5/scrollreveal.min.js"></script>
 </head>
 <body>
     <div class="emi-main">
@@ -76,9 +79,9 @@
         </section>
 
         <!-- main container  -->
-        <section class="main-container main-wraper">
-            <div class="side-main">
-                <div class="mySlides fade">
+        <div class="main-container main-wraper">
+            <section  class="side-main">
+                <!-- <div class="mySlides fade">
                     <img src="assets/upload_img/emi-slide--03.jpg" style="width:100%">
                     <div class="text">
                         <div class="fade-up">
@@ -134,19 +137,38 @@
                 </div>
                 
                 <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-            </div>
+                <a class="next" onclick="plusSlides(1)">❯</a> -->
+            
+                <div class="slideshowContainer">
+                    <img class="imageSlides" src="assets/upload_img/emi-slide--03.jpg" alt="beach side city view">
+                    <img class="imageSlides" src="assets/upload_img/emi-slide-02.jpg" alt="leaf on the ground">
+                    <img class="imageSlides" src="assets/upload_img/emi-slide-01.jpg" alt="lake surrounded by mountains">
+                    <img class="imageSlides" src="assets/upload_img/affatoun.jpg" alt="lake surrounded by mountains">
+                      
+                    <span id ="leftArrow" class="slideshowArrow">&#8249;</span>
+                    <span id ="rightArrow" class="slideshowArrow">&#8250;</span>
+                    
+                    <div class="slideshowCircles">
+                        <span class="circle dot"></span>
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                    </div>
+                      
+                </div>
+            
+            </section >
 
             <!-- The dots/circles -->
-            <div style="text-align:center; padding: 15px 0;">
+            <!-- <div style="text-align:center; padding: 15px 0;">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
                 <span class="dot" onclick="currentSlide(4)"></span>
-            </div>
-            <div class="vision-mission">
+            </div> -->
+            <section  class="vision-mission">
                 <div class="emi-vision">
-                    <div class="vision-text">
+                    <div class="vision-text slide-up">
                         <i class="material-symbols-outlined">my_location</i>
                         <h1>OUR <span>VISION</span></h1>
                         <p>ໃຫ້ການບໍລິການດ້ານການເງິນທີ່ຫຼາກຫຼາຍ ແບບມີຄວາມ
@@ -155,7 +177,7 @@
                             ດ້ານການດຳລົງຊິວິດ ແລະ ທຸລະກິດຄອບຄົວ
                             ຂອງພວກເຂົາແບບຍືນຍົງ.</p>
                     </div>
-                    <div class="vision-text">
+                    <div class="vision-text slide-up">
                         <i class="material-symbols-outlined">stream</i>
                         <h1>OUR <span class="m">MISSION</span></h1>
                         <p>ສະຖາບັນການເງິນຈຸລະພາກ ທີ່ຮັບເງິນຝາກ ເອກພັດທະນາ
@@ -165,9 +187,9 @@
                             ໃນປະເທດລາວ.</p>
                     </div>
                 </div>
-            </div>
+            </section >
             <hr>
-            <div class="emi-value">
+            <section  class="emi-value">
                 
                 <div class="values">
                     <!-- <h3>OUR VALUE</h3> -->
@@ -177,7 +199,7 @@
                             <hr>
                             <p>Our operations are guided by six key social goals</p>
                             </br>
-                            <div class="emi-num" style="border-left: 3px solid var(--green-color-100);">
+                            <div class="emi-num slide-up" style="border-left: 3px solid var(--green-color-100);">
                                 <div class="num-text">
                                     <h5>01</h5>
                                 </div>
@@ -185,58 +207,58 @@
                                 <p>EMI offers responsible financial services, enabling clients to sustainably grow their household and business assets and achieve their family goals.</p>
                             </div>
 
-                            <div class="emi-num" style="border-left: 3px solid var(--pink-color);">
+                            <div class="emi-num slide-up" style="border-left: 3px solid var(--pink-color);">
                                 <div class="num-text">
                                     <h5>02</h5>
                                 </div>
                                 <p>EMI offers first-rate financial education services, helping clients learn to manage their money wisely in meeting their household budget needs and growing their businesses.</p>
                             </div>
 
-                            <div class="emi-num" style="border-left: 3px solid var(--pure-color);">
+                            <div class="emi-num slide-up" style="border-left: 3px solid var(--pure-color);">
                                 <div class="num-text">
                                     <h5>03</h5>
                                 </div>
                                 <p>EMI is an equal opportunity employer that values diversity and invests in the continuous education of its employees.</p>
                             </div>
 
-                            <div class="emi-num" style="border-left: 3px solid var(--yellow-color);">
+                            <div class="emi-num slide-up" style="border-left: 3px solid var(--yellow-color);">
                                 <div class="num-text">
                                     <h5>04</h5>
                                 </div>
                                 <p>EMI follows microfinance industry best practice and works closely with partners and peers to ensure sustainable growth and offer quality financial inclusion in Lao PDR.</p>
                             </div>
 
-                            <div class="emi-num"  style="border-left: 3px solid var(--blue-color);">
+                            <div class="emi-num slide-up"  style="border-left: 3px solid var(--blue-color);">
                                 <div class="num-text">
                                     <h5>05</h5>
                                 </div>
                                 <p>EMI seeks long-term sustainability through financial viability while creating client value.</p>
                             </div>
 
-                            <div class="emi-num"  style="border-left: 3px solid var(--orange-color);">
+                            <div class="emi-num slide-up"  style="border-left: 3px solid var(--orange-color);">
                                 <div class="num-text">
                                     <h5>06</h5>
                                 </div>
                                 <p>EMI cares about the environment and takes measurable steps to reduce its carbon footprint.</p>
                             </div>
                         </div>
-                        <div class="social-text">
-                            <img src="assets/upload_img/social-value_Artboard.png" alt="social">
+                        <div class="social-text img-box slide-up">
+                            <img class="" src="assets/upload_img/social-value_Artboard.png" alt="social">
                         </div>
                     </div>
                     
                 </div>
-            </div>
+            </section >
 
             <!-- end emi value  -->
 
             <!-- emi background  -->
             <section class="emi-abouts">
                 <div class="abouts">
-                    <div class="about-text">
+                    <div class="about-text slide-right">
                         <img src="assets/upload_img/about-us.png" alt="about us">
                     </div>
-                    <div class="about-text">
+                    <div class="about-text slide-left">
                         <div class="text_l">
                             <h2>ABOUT <span>US</span>
                                 <hr>
@@ -259,11 +281,11 @@
                     <h2>OUR <span>SERVICES</span></h2>
                     <p></p>
                     <div class="group-servic">
-                        <div class="services">
+                        <div class="services slide-left">
                             <i class="material-symbols-outlined">real_estate_agent</i>
                             <div class="service-text">
                                 <h3>Loans</h3>
-                                <h1 class="count" value="138000">0</h1>
+                                <h1 class="count" id="num-1">0+</h1>
                                 <p>ເງິນກູ້ແສນບາຍ ແລະ ສະດວກຈ່າຍຢູ່ໃສ່ກໍໄດ້...<p>
 
                                 <div class="btn-learn">
@@ -273,11 +295,11 @@
                             </div>                    
                         </div>
 
-                        <div class="services">
+                        <div class="services slide-right">
                             <i class="material-symbols-outlined">savings</i>
                             <div class="service-text">
                                 <h3>Deposit</h3>
-                                <h1 class="count" value="6000">0</h1>
+                                <h1 class="count" id="num-2">0+</h1>
                                 <p>ເງິນຝາກທີ່ອຸນໃຈ ແລະ ຖອນຢູ່ໃສ່ກໍໄດ້...<p>
                                 <div class="btn-learn">
                                     <a href="#">View more.. <i class="material-symbols-outlined">east</i></a>
@@ -285,11 +307,11 @@
                             </div>                    
                         </div>
 
-                        <div class="services">
+                        <div class="services slide-up">
                             <i class="material-symbols-outlined">account_balance</i>
                             <div class="service-text">
                                 <h3>Saving</h3>
-                                <h1 class="count" value="18000">0</h1>
+                                <h1 class="count" id="num-3">0+</h1>
                                 <p>ເງິນຝາກປະຫຍັດສຸດຄຸ້ມ ແລະ ປວດໄພ...<p>
                                 <div class="btn-learn">
                                     <a href="#">View more.. <i class="material-symbols-outlined">east</i></a>
@@ -297,11 +319,11 @@
                             </div>                    
                         </div>
 
-                        <div class="services">
+                        <div class="services slide-down">
                             <i class="material-symbols-outlined">celebration</i>
                             <div class="service-text">
                                 <h3>Affatoun</h3>
-                                <h1 class="count" value="4000">0</h1>
+                                <h1 class="count" id="num-4">0+</h1>
                                 <p>ໂຄງການການສຶກສາທາງດ້ານການເງິນ ແລະ ເພື່ອອະນາຄົດທີ່ສົດໃສ່...<p>
 
                                 <div class="btn-learn">
@@ -335,11 +357,11 @@
             <!-- Emi our story  -->
             <section class="emi-ourstory">
                 <div class="solution">
-                    <div class="item-text">
+                    <div class="item-text slide-up">
                         <h2>Our <span>Partners</span></h2>
                     </div>
                     
-                    <div class="item-solution">
+                    <div class="item-solution slide-right">
                         <img src="assets/upload_img/allianz-logo.svg" alt="">
                         <img src="assets/upload_img/cib.png" class="circle" alt="">
                         <img src="assets/upload_img/bcelone.png" class="circle" alt="">
@@ -347,7 +369,7 @@
                     </div>
                 </div>
             </section>
-        </section>
+        </div>
 
         <!-- end our partners  -->
         <section class="emi-footer">
@@ -438,9 +460,10 @@
             </div>
         </div>
     </div>
-
     
-
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/autoslide.js"></script>
+    <script src="assets/js/counterNum.js"></script>
     <!-- Ipport toggle submenu  -->
     <script src="assets/js/main.js"></script>
 </body>

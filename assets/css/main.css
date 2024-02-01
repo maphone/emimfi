@@ -34,11 +34,13 @@
   --orange-color: rgb(236, 111, 9);
 }
 
-.scrolled {
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0px 0px 5px var(--pink-color);
+html, body {
+  margin: 0;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
 }
 
 .emi-main {
@@ -238,115 +240,78 @@
 .emi-main .emi-menu-bar .emi-brows li .subb-login.open-login {
   height: 350px;
 }
-.emi-main .main-container {
-  /* The dots/bullets/indicators */
-}
 .emi-main .main-container .side-main {
   max-width: 1920px;
   position: relative;
   margin: auto;
-  /* Next & previous buttons */
-  /* Position the "next button" to the right */
-  /* On hover, add a black background color with a little bit see-through */
 }
-.emi-main .main-container .side-main .mySlides {
-  display: none;
-  transition: all 0.5s;
-  height: 750px;
-  /* Caption text */
-}
-.emi-main .main-container .side-main .mySlides img {
-  width: 100%;
-  background-size: cover;
-}
-.emi-main .main-container .side-main .mySlides .text {
-  position: absolute;
-  height: 300px;
-  bottom: 0;
-  overflow: hidden;
-}
-.emi-main .main-container .side-main .mySlides .text .fade-up {
+.emi-main .main-container .side-main .slideshowContainer {
   position: relative;
-  background-color: var(--primary-color);
-  height: 300px;
-  margin-top: 19em;
-  transition: ease-in-out 0.5s;
+  overflow: hidden;
+  width: 100%;
+  height: 850px;
+  /* add 'visible' class via Javascript */
 }
-.emi-main .main-container .side-main .mySlides .text .fade-up .caption {
-  width: 60%;
-  color: #f2f2f2;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.emi-main .main-container .side-main .mySlides .text .fade-up .caption h3 {
-  font-size: 36px;
-  padding: 20px 0;
-}
-.emi-main .main-container .side-main .mySlides .text .fade-up .caption a {
-  padding: 12px 18px;
-  border-radius: 8px;
-  color: var(--primary-color);
-  background: var(--green-color-5);
-  font-size: 16px;
-  text-decoration: none;
-}
-.emi-main .main-container .side-main .mySlides .text .fade-up .caption a i {
-  vertical-align: -7px;
-}
-.emi-main .main-container .side-main .mySlides .text .fade-up .caption a:hover i {
-  margin-left: 5px;
-  transition: ease-in-out 0.3s;
-}
-.emi-main .main-container .side-main .mySlides .text:hover .fade-up {
-  margin-top: 0;
-}
-.emi-main .main-container .side-main .prev, .emi-main .main-container .side-main .next {
-  cursor: pointer;
+.emi-main .main-container .side-main .slideshowContainer .imageSlides {
   position: absolute;
+  left: 50%;
   top: 50%;
-  width: auto;
-  padding: 18px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -100;
 }
-.emi-main .main-container .side-main .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.emi-main .main-container .side-main .slideshowContainer .visible {
+  opacity: 1;
 }
-.emi-main .main-container .side-main .prev:hover, .emi-main .main-container .side-main .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.emi-main .main-container .side-main .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-.emi-main .main-container .dot {
+.emi-main .main-container .side-main .slideshowContainer .slideshowArrow {
+  font-size: 7em;
+  color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #c5c5c5;
-  border-radius: 50%;
-  display: inline-block;
-  transition: all 0.6s;
+  transition: opacity 0.2s ease-in-out;
 }
-.emi-main .main-container .active, .emi-main .main-container .dot:hover {
-  transition: all 0.6s;
-  background-color: var(--green-color-100);
-  width: 40px;
-  border-radius: 6px;
+.emi-main .main-container .side-main .slideshowContainer .slideshowArrow:hover {
+  opacity: 0.75;
+}
+.emi-main .main-container .side-main .slideshowContainer #leftArrow {
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.emi-main .main-container .side-main .slideshowContainer #rightArrow {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+.emi-main .main-container .side-main .slideshowContainer .slideshowCircles {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.emi-main .main-container .side-main .slideshowContainer .slideshowCircles .circle {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  transition: 1s ease-in-out;
+}
+.emi-main .main-container .side-main .slideshowContainer .slideshowCircles .dot {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: solid 2px rgba(255, 255, 255, 0.5);
 }
 .emi-main .main-container .vision-mission {
   width: 100%;
-  padding: 5em 0;
+  padding: 8em 0;
+  background-image: linear-gradient(120deg, #c3c4fc 0%, #a7ffac 100%);
 }
 .emi-main .main-container .vision-mission .emi-vision {
   width: 90%;
@@ -356,8 +321,11 @@
 }
 .emi-main .main-container .vision-mission .emi-vision .vision-text {
   width: 45%;
-  padding: 1em 1em;
+  padding: 5em 2em;
+  border-radius: 20px;
+  cursor: pointer;
   margin: 0 auto;
+  transition: opacity 1s ease-in-out;
 }
 .emi-main .main-container .vision-mission .emi-vision .vision-text i {
   font-size: 180px;
@@ -375,6 +343,10 @@
 }
 .emi-main .main-container .vision-mission .emi-vision .vision-text p {
   font-size: 19px;
+}
+.emi-main .main-container .vision-mission .emi-vision .vision-text:hover {
+  box-shadow: 0 15px 25px -25px #1F1F46;
+  transform: translateY(-8px);
 }
 .emi-main .main-container hr {
   width: 60%;
@@ -398,6 +370,7 @@
 .emi-main .main-container .emi-value .values .social .social-text {
   width: 50%;
   margin: 0 auto;
+  transition: opacity 1s ease-in-out;
 }
 .emi-main .main-container .emi-value .values .social .social-text h4 {
   font-size: 65px;
@@ -436,9 +409,14 @@
 .emi-main .main-container .emi-value .values .social .social-text .emi-num p {
   font-size: 15px;
 }
-.emi-main .main-container .emi-value .values .social .social-text img {
+.emi-main .main-container .emi-value .values .social .img-box {
+  padding: 2em 0;
+  display: block;
+}
+.emi-main .main-container .emi-value .values .social .img-box img {
   width: 100%;
-  margin: auto;
+  margin: 2em auto;
+  display: block;
 }
 .emi-main .main-container .emi-abouts {
   width: 100%;

@@ -40,16 +40,15 @@
 
 // =============== Fixed header when scrolling down ===============================
 
-.scrolled{
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0px 0px 5px var(--pink-color);
+html,body{
+    margin: 0;
+    scroll-snap-type: y mandatory;
 }
 
-
 // end fixed header ===================================
-
+section {
+    scroll-snap-align: start;
+}
 
 .emi-main{
     max-width: 1920px;
@@ -294,128 +293,88 @@
             position: relative;
             margin: auto;
 
-            .mySlides{
-                display: none;
-                transition: all .5s;
-                height: 750px;
+           
+            // ========================= Slide image ======================================
+            .slideshowContainer {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                height: 850px;
 
-                img{
-                    width: 100%;
-                    background-size: cover;
-                    
-                }
-
-                /* Caption text */
-                .text {
+                .imageSlides {
                     position: absolute;
-                    height: 300px;
-                    bottom: 0;
-                    overflow: hidden;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    min-width: 100%;
+                    min-height: 100%;
+                    opacity: 0;
+                    transition: opacity 1s ease-in-out;
+                    z-index: -100;
+                }
+                
+                /* add 'visible' class via Javascript */
+                .visible {
+                    opacity: 1;
+                }
+                
+                .slideshowArrow {
+                    font-size: 7em;
+                    color: rgba(255, 255, 255, 0.5);
+                    cursor: pointer;
+                    transition: opacity 0.2s ease-in-out;
+                }
+                
+                .slideshowArrow:hover {
+                    opacity: 0.75;
+                }
+                
+                #leftArrow {
+                    position: absolute;
+                    left: 4%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                
+                #rightArrow {
+                    position: absolute;
+                    right: 4%;
+                    top: 50%;
+                    transform: translate(50%, -50%);
+                }
+                
+                .slideshowCircles {
+                    position: absolute;
+                    bottom: 2%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
 
-                    .fade-up{
-                        position: relative;
-                        background-color: var(--primary-color);                        
-                        height: 300px;
-                        margin-top: 19em;
-                        transition: ease-in-out .5s;
-
-                        .caption{                            
-                            width: 60%;
-                            color: #f2f2f2;
-                            left: 0;
-                            right: 0;
-                            margin: auto;
-
-                            h3{
-                                font-size: 36px;
-                                padding: 20px 0;
-                            }
-
-                            a{
-                                padding: 12px 18px;
-                                border-radius: 8px;
-                                color: var(--primary-color);
-                                background: var(--green-color-5);
-                                font-size: 16px;
-                                text-decoration: none;
-
-                                i{
-                                    vertical-align: -7px;
-                                }
-                            }
-
-                            a:hover i{
-                                margin-left: 5px;
-                                transition: ease-in-out .3s;
-                            }
-                        }
+                    .circle {
+                        display: inline-block;
+                        margin-left: 3px;
+                        margin-right: 3px;
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        border: solid 2px rgba(255, 255, 255, 0.5);
+                        transition: 1s ease-in-out;
                     }
-
+                    
+                    .dot {
+                        background-color: rgba(255, 255, 255, 0.7);
+                        border: solid 2px rgba(255, 255, 255, 0.5);
+                    }
                 }
-                .text:hover .fade-up{
-                    margin-top: 0;
-                }
-
             }
-
-            /* Next & previous buttons */
-            .prev, .next {
-                cursor: pointer;
-                position: absolute;
-                top: 50%;
-                width: auto;
-                padding: 18px;
-                margin-top: -22px;
-                color: white;
-                font-weight: bold;
-                font-size: 20px;
-                transition: 0.6s ease;
-                border-radius: 0 3px 3px 0;
-                user-select: none;
-            }
-            
-            /* Position the "next button" to the right */
-            .next {
-                right: 0;
-                border-radius: 3px 0 0 3px;
-            }
-            
-            /* On hover, add a black background color with a little bit see-through */
-            .prev:hover, .next:hover {
-                background-color: rgba(0,0,0,0.8);
-            }
-
-            .fade {
-                animation-name: fade;
-                animation-duration: 1.5s;
-            }
-
-        }
-
-        /* The dots/bullets/indicators */
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #c5c5c5;
-            border-radius: 50%;
-            display: inline-block;
-            transition: all 0.6s;
-        }
-        
-        .active, .dot:hover {
-            transition: all 0.6s;
-            background-color: var(--green-color-100);
-            width: 40px;
-            border-radius: 6px;
         }
 
         // =============================== end slider image =====================================
 
         .vision-mission{
             width: 100%;
-            padding: 5em 0;
+            padding: 8em 0;
+            background-image: linear-gradient(120deg, #c3c4fc 0%, #a7ffac 100%);
 
 
             .emi-vision{
@@ -426,8 +385,12 @@
 
                 .vision-text{
                     width: 45%;
-                    padding: 1em 1em;
-                    margin: 0 auto;
+                    padding: 5em 2em;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    margin: 0 auto;                    
+                    transition: opacity 1s ease-in-out;
+                    
 
                     i{
                         font-size: 180px;
@@ -452,7 +415,13 @@
                         font-size: 19px;
                     }
                 }
+                .vision-text:hover {
+                    box-shadow: 0 15px 25px -25px #1F1F46;
+                    transform: translateY(-8px);
+                }
             }
+
+            
         }
 
         hr{
@@ -474,15 +443,6 @@
                 width: 90%;
                 margin: auto;
 
-                // h3{
-                //     margin: auto;
-                //     text-align: center;
-                //     font-size: 45px;
-                //     color: var(--primary-color);
-                //     border-bottom: 5px solid var(--green-color-100);
-                //     width: 300px;
-                // }
-
                 .social{
                     padding: 4rem 0;
                     display: flex;
@@ -490,6 +450,7 @@
                     .social-text{
                         width: 50%;
                         margin: 0 auto;
+                        transition: opacity 1s ease-in-out;
 
                         h4{
                             font-size: 65px;
@@ -536,11 +497,18 @@
                                 font-size: 15px;
                             }
                         }
+                        
+                    }
+
+                    .img-box{
+                        padding: 2em 0;
+                        display: block;
 
                         img{
                             width: 100%;
-                            margin: auto;
-                        }
+                            margin: 2em auto;
+                            display: block;
+                        } 
                     }
                 }
             }
@@ -1063,3 +1031,10 @@
     from {opacity: .4}
     to {opacity: 1}
 }
+
+
+
+
+  
+  
+  

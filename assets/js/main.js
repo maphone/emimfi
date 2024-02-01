@@ -41,11 +41,11 @@ function showSlides() {
   setTimeout(showSlides, 5000); // Change image every 5 seconds
 }
 
-// Plus slideshow
 
 
 
-// fixed header when scrolling 
+
+
 
 let headerScroll = document.getElementById("headerScrolling");
 
